@@ -1,0 +1,97 @@
+<van-notice-bar left-icon="volume-o" scrollable text="本页面所展示商品，均来源与网络，仅供展示以及提供购买渠道，如有侵权，联系删除" />
+<van-sticky>
+  <van-search value="{{ value }}" shape="round" background="#f5cb70" placeholder="请输入搜索关键词" />
+</van-sticky>
+<view class="books_body">
+  <van-row>
+    <!-- 左侧导航 -->
+    <van-col span="6">
+      <scroll-view style="height:1150rpx" scroll-y="true">
+        <van-sidebar active-key="{{ activeKey }}">
+          <block wx:for="{{bookMenu}}">
+            <van-sidebar-item title="{{item}}" bind:click="chage" data-type="{{item}}" />
+          </block>
+        </van-sidebar>
+      </scroll-view>
+    </van-col>
+    <!-- 商品列表 -->
+    <van-col span="18">
+      <scroll-view style="height:1150rpx" scroll-y="true">
+        <block wx:for="{{books}}">
+          <van-card price="{{item.bookPrice}}" desc="" title="《{{item.bookName}}》" thumb="{{item.bookImage}}">
+            <view slot="footer" class="footer" bindtap="like" data-book-id="{{item.bookID}}">
+              加入想买
+              <van-icon name="add" color="#f5cb70" size="30rpx" />
+            </view>
+            <view slot="desc">
+              <view class="van-ellipsis" hover-class="none" hover-stop-propagation="false">
+                {{item.bookAuthor}}
+              </view>
+            </view>
+            <view slot="price-top">
+              <van-tag mark type="primary">{{item.bookClassification}}</van-tag>
+            </view>
+          </van-card>
+        </block>
+        <!-- 暂无商品显示 -->
+        <van-card>
+          <view slot="title">
+            <van-loading size="24rpx" text-size="24rpx" color="#1989fa">更多书籍等待更新中...</van-loading>
+          </view>
+          <view slot="footer" class="footer" bindtap="like">请等待后台更新</view>
+          <view slot="desc">
+            <view class="van-ellipsis" hover-class="none" hover-stop-propagation="false"></view>
+          </view>
+        </van-card>
+      </scroll-view>
+    </van-col>
+  </van-row>
+</view>
+<!-- 弹出层 -->
+<van-popup show="{{ show }}" position="bottom" custom-class="shopping_body" bind:close="onClose">
+  <view class="shopping_title">
+    <van-cell arrow-direction="down">
+      <view slot="title">
+        <view class="van-cell-text">我的想要</view>
+      </view>
+      <view bindtap="removeLike">
+        <view class="van-cell-text">清空</view>
+      </view>
+      <view slot="right-icon">
+        <van-icon name="delete" size="24rpx" />
+      </view>
+    </van-cell>
+  </view>
+  <!-- 加购商品展示 -->
+  <view class="shopping_box">
+    <scroll-view style="height:520rpx" scroll-y="true">
+      <block wx:for="{{likeBooks}}">
+        <van-card price="{{item.bookPrice}}" desc="" title="《{{item.bookName}}》" thumb="{{item.bookImage}}">
+          <view slot="footer" class="footer">
+          <!-- 增加减少商品数量模块 -->
+            <van-stepper value="{{item.commodityNum}}" input-width="40rpx" button-size="32rpx" async-change bind:plus="CommodityNumPlus" disable-input bind:minus="CommodityNumMinus" data-bookID="{{item.bookID}}" />
+          </view>
+          <view slot="desc">
+            <view class="van-ellipsis" hover-class="none" hover-stop-propagation="false">
+              {{item.bookAuthor}}
+            </view>
+          </view>
+          <view slot="price-top">
+            <van-tag mark type="primary">{{item.bookClassification}}</van-tag>
+          </view>
+        </van-card>
+      </block>
+      <van-divider contentPosition="center" customStyle="color:#f5cb70; border-color: #f5cb70; font-size: 28rpx;">
+        暂时没有更多啦
+      </van-divider>
+    </scroll-view>
+  </view>
+</van-popup>
+<!-- 商品导航 -->
+<van-submit-bar price="{{bookPrice}}" button-text="加入收藏" bind:submit="onClickButton" tip="{{ true }}">
+  <van-icon name="shopping-cart-o" size="60rpx" info="{{bookNum}}" bind:click="lookProductList" />
+  <view slot="tip">
+    加入收藏之后就去书店购买吧！
+    <text bindtap="goBookstore" class="goBookstore_text">点我查看附近书店</text>
+  </view>
+</van-submit-bar>

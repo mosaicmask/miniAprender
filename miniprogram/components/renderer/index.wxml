@@ -1,0 +1,6 @@
+<block wx:if="{{tokenLines}}">
+    <view wx:for="{{tokenLines}}" wx:for-item="line" wx:for-index="i">
+        <text class="line-number">{{i+1}}</text>
+        <text wx:for="{{line}}" wx:for-item="token" class="token token--{{token.type}}">{{token.content}}</text>
+    </view>
+</block>

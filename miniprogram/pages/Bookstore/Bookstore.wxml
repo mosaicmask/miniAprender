@@ -1,0 +1,24 @@
+<!-- map.wxml -->
+<map id="map" longitude="{{userLongitude}}" latitude="{{userLatitude}}" scale="13" markers="{{markers}}" include-points="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" show-location style="width: 100%; height: 100vh;"></map>
+<van-popup show="{{ show }}" position="bottom" custom-style="height: 20%;" closeable round bind:close="onClose">
+		<van-cell center border="{{false}}">
+				<view slot="title">
+						<view class="van-cell-text">{{current.title}}</view>
+				</view>
+				<view slot="icon">
+						<van-icon name="bag-o" color="red" size="40rpx" />
+				</view>
+		</van-cell>
+		<van-cell>
+				<view slot="title" class="description">
+						<view class="distance">距你{{distance}}</view>
+						<view class="fg">|</view>
+						<block wx:if="{{current.address == ''}}">
+								<view class="address">暂无地址</view>
+						</block>
+						<block wx:else>
+								<view class="address">{{current.address}}</view>
+						</block>
+				</view>
+		</van-cell>
+</van-popup>

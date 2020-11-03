@@ -1,0 +1,26 @@
+.van-cell-text {
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.distance {}
+
+.fg {
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  color: #c0c0c0;
+}
+
+.address {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}

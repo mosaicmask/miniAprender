@@ -1,0 +1,37 @@
+<van-collapse accordion value="{{ activeName }}" bind:change="onChange">
+  <van-collapse-item title="基础" name="1">
+    <van-cell title="安装" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="Vue.js 介绍" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="Vue 实例" border="{{false}}" clickable="{{true}}" bindtap="go" />
+    <van-cell title="模板语法" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="计算属性和侦听器" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="Class 与 Style 绑定" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="列表渲染" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="事件处理" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="表单输入绑定" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="组件基础" border="{{false}}" clickable="{{true}}" />
+  </van-collapse-item>
+  <van-collapse-item title="深入了解组件" name="2">
+    <van-cell title="组件注册" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="Prop" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="自定义事件" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="插槽" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="动态组件 & 异步组件" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="处理边界情况" border="{{false}}" clickable="{{true}}" />
+  </van-collapse-item>
+  <van-collapse-item title="过度&动画" name="3">
+    <van-cell title="进入/离开 & 列表过渡" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="状态过渡" border="{{false}}" clickable="{{true}}" />
+  </van-collapse-item>
+  <van-collapse-item title="可复用性&组合" name="4">
+    <van-cell title="混入" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="自定义指令" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="渲染函数 & JSX" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="插件" border="{{false}}" clickable="{{true}}" />
+    <van-cell title="过滤器" border="{{false}}" clickable="{{true}}" />
+  </van-collapse-item>
+  <van-collapse-item title="工具" name="5"></van-collapse-item>
+  <van-collapse-item title="规模化" name="6"></van-collapse-item>
+  <van-collapse-item title="内在" name="7"></van-collapse-item>
+  <van-collapse-item title="迁移" name="8"></van-collapse-item>
+</van-collapse>

@@ -1,0 +1,33 @@
+page .page_new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+page .page_new .search {
+  width: 100%;
+  height: auto;
+}
+page .page_new .list_body {
+  width: 90%;
+  height: 160rpx;
+  margin-top: 30rpx;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #bdbdbd;
+}
+page .page_new .list_body .list_row {
+  width: 100%;
+  height: auto;
+}
+page .page_new .list_body .list_row .list_limg .show_img {
+  width: 250rpx;
+  height: 140rpx;
+}
+page .page_new .list_body .list_row .list_text .title {
+  font-size: 32rpx;
+  margin-top: 10rpx;
+}
+page .page_new .list_body .list_row .list_text .describe {
+  font-size: 22rpx;
+  margin-top: 40rpx;
+}

@@ -1,0 +1,26 @@
+<view class="page_new">
+  <!-- 搜索框开始 -->
+  <van-sticky>
+    <view class="search">
+      <van-search value="{{ value }}" shape="round" background="#f5cb70" placeholder="请输入文档相关字段" />
+    </view>
+  </van-sticky>
+  <!-- 搜索框结束 -->
+  <!-- 文档列表开始 -->
+  <block wx:for="{{file}}">
+    <view class="list_body" hover-class="none" hover-stop-propagation="false" bindtap="goDocumentListPage" data-document-id="{{item.documentId}}">
+      <van-row custom-class="list_row">
+        <van-col span="10" custom-class="list_limg">
+          <van-image custom-class="show_img" radius="5rpx " src="{{item.image}}" />
+        </van-col>
+        <van-col span="14" custom-class="list_text">
+          <view class="title van-ellipsis">{{item.documentTitle}}</view>
+          <view class="describe van-ellipsis" selectable="false" space="false" decode="false">
+            {{item.documentIntroduction}}
+          </view>
+        </van-col>
+      </van-row>
+    </view>
+  </block>
+  <!-- 文档列表结束 -->
+</view>

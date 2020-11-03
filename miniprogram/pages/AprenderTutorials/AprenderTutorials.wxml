@@ -1,0 +1,103 @@
+<view class="page_new">
+  <!-- 搜索框开始 -->
+  <van-sticky>
+    <view class="search">
+      <van-search value="{{ value }}" shape="round" background="#f5cb70" placeholder="请输入教程相关字段"></van-search>
+    </view>
+  </van-sticky>
+  <!-- 搜索框结束 -->
+  <!-- 热门教程开始 -->
+  <view class="Tu_body">
+    <van-cell border="{{false}}" link-type="navigateTo" url="/pages/TutorialList/TutorialList">
+      <view slot="title">
+        <view class="van-cell-text">热门教程</view>
+        <van-tag type="danger">工作轻松到手</van-tag>
+      </view>
+      <van-icon slot="right-icon" name="weapp-nav" class="custom-icon" />
+    </van-cell>
+    <van-grid column-num="3" gutter="{{ 10 }}" border="{{ false }}">
+      <block wx:for="{{ file }}" wx:if="{{index<9}}">
+        <van-grid-item use-slot bind:click="showPopup" data-tutorialsId="{{item.tutorialsId}}">
+          <image style="width: 120rpx; height: 120rpx;" src="{{item.logo}}" />
+          <view class="text">{{item.courseTitle}}</view>
+        </van-grid-item>
+      </block>
+    </van-grid>
+  </view>
+  <!-- 热门教程结束 -->
+  <!-- html+css开始 -->
+  <view class="Tu_body">
+    <van-cell border="{{false}}" link-type="navigateTo" url="/pages/TutorialList/TutorialList">
+      <view slot="title">
+        <view class="van-cell-text">HTML/CSS</view>
+        <van-tag type="warning">打开Web前端的大门</van-tag>
+      </view>
+      <van-icon slot="right-icon" name="weapp-nav" class="custom-icon" />
+    </van-cell>
+    <van-grid column-num="3" gutter="{{ 10 }}" border="{{ false }}">
+      <block wx:for="{{ file }}" wx:if="{{item.ascription=='HTML/CSS'}}">
+        <van-grid-item use-slot bind:click="showPopup" data-tutorialsId="{{item.tutorialsId}}">
+          <image style="width: 120rpx; height: 120rpx;" src="{{item.logo}}" />
+          <view class="text">{{item.courseTitle}}</view>
+        </van-grid-item>
+      </block>
+    </van-grid>
+  </view>
+  <!-- html+css结束 -->
+  <!-- javascript开始 -->
+  <view class="Tu_body">
+    <van-cell border="{{false}}" link-type="navigateTo" url="/pages/TutorialList/TutorialList">
+      <view slot="title">
+        <view class="van-cell-text">JavaScript</view>
+        <van-tag color="#f2826a">你不得不学的技能之一</van-tag>
+      </view>
+      <van-icon slot="right-icon" name="weapp-nav" class="custom-icon" />
+    </van-cell>
+    <van-grid column-num="3" gutter="{{ 10 }}" border="{{ false }}">
+      <block wx:for="{{ file }}" wx:if="{{item.ascription=='JavaScript'}}">
+        <van-grid-item use-slot bind:click="showPopup" data-tutorialsId="{{item.tutorialsId}}">
+          <image style="width: 120rpx; height: 120rpx;" src="{{item.logo}}" />
+          <view class="text">{{item.courseTitle}}</view>
+        </van-grid-item>
+      </block>
+    </van-grid>
+  </view>
+  <!-- javascript结束 -->
+</view>
+<!-- 弹出层 -->
+<van-popup show="{{ show }}" bind:close="onClose" closeable>
+  <view class="list_body" hover-class="none" hover-stop-propagation="false">
+    <van-row custom-class="list_row">
+      <van-col span="6" custom-class="list_limg">
+        <van-image custom-class="show_img" src="{{tutorial.logo}}" />
+      </van-col>
+      <van-col span="18" custom-class="list_text">
+        <view class="title">{{tutorial.courseTitle}}</view>
+        <view class="describe van-ellipsis" selectable="false" space="false" decode="false">
+          阅读：{{tutorial.tutorialsReaders}}次
+        </view>
+      </van-col>
+    </van-row>
+  </view>
+  <view class="Introduction_body">
+    <van-cell title="教程简介" border="{{false}}" title-class="IntroductionTitle" />
+    <view class="IntroductionText">
+      {{tutorial.courseIntroduction}}
+    </view>
+  </view>
+  <view class="botton_body">
+    <van-row>
+      <van-col span="8">
+        <van-button type="warning" ize="large" custom-class="button" bind:click="goIntroduction" data-tutorialsId="{{tutorial.tutorialsId}}">
+          开始阅读
+        </van-button>
+      </van-col>
+      <van-col span="8">
+        <van-button type="default" ize="large" custom-class="button">收藏</van-button>
+      </van-col>
+      <van-col span="8">
+        <van-button type="default" size="normal" custom-class="button">分享</van-button>
+      </van-col>
+    </van-row>
+  </view>
+</van-popup>

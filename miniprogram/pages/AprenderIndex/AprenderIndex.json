@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-load-more": "../../dist/load-more/index",
+    "i-divider": "../../dist/divider/index"
+  },
+  "navigationBarTitleText": "文档列表",
+  "navigationBarTextStyle": "white"
+  
+}

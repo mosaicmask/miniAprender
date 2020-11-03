@@ -1,0 +1,59 @@
+page {
+  background-color: #f0f0f0;
+}
+page .van-cell-text {
+  font-size: 34rpx;
+  font-weight: 600;
+}
+page .Tu_body {
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+page .text {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-top: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+page .list_body {
+  width: 700rpx;
+  height: 180rpx;
+  margin-top: 10rpx;
+}
+page .list_body .list_row .list_limg .show_img {
+  width: 140rpx;
+  height: 140rpx;
+}
+page .list_body .list_row .list_text .title {
+  font-size: 32rpx;
+  margin-top: 10rpx;
+}
+page .list_body .list_row .list_text .describe {
+  font-size: 22rpx;
+  margin-top: 40rpx;
+}
+page .Introduction_body {
+  width: 100%;
+}
+page .Introduction_body .IntroductionTitle {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+page .Introduction_body .IntroductionText {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  font-size: 24rpx;
+  color: #8d8d8d;
+}
+page .botton_body {
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+page .botton_body .button {
+  width: 200rpx;
+  margin-left: 16rpx;
+}

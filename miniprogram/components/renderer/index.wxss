@@ -1,0 +1,41 @@
+:host {
+    text-align: left;
+    font-family: consolas,monospace;
+    line-height: 1.44;
+    white-space: nowrap;
+}
+
+.line-number {
+    display: inline-block;
+    border-right: 2px solid #d8d8d8;
+    width: 2em;
+    text-align: right;
+    margin-right: .75em;
+    padding-right: .75em;
+    color: #888;
+}
+
+.token {
+    color: #333;
+    white-space: pre;
+}
+
+.token--keyword {
+    color: #00f;
+}
+
+.token--number {
+    color: #09885a;
+}
+
+.token--string {
+    color: #a31515
+}
+
+.token--regex {
+    color: #811f3f;
+}
+
+.token--comment {
+    color: #008000;
+}

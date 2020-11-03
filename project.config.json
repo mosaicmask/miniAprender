@@ -1,0 +1,121 @@
+{
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": []
+  },
+  "appid": "wx051def87e69c100b",
+  "projectname": "miniAprender",
+  "libVersion": "2.12.0",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "pages/AprenderTutorials/AprenderTutorials",
+          "pathName": "pages/AprenderTutorials/AprenderTutorials",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/AprenderBooks/AprenderBooks",
+          "pathName": "pages/AprenderBooks/AprenderBooks",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/AprenderMy/AprenderMy",
+          "pathName": "pages/AprenderMy/AprenderMy",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/AprenderMy/AprenderMy",
+          "pathName": "pages/AprenderMy/AprenderMy",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/Bookstore/Bookstore",
+          "pathName": "pages/Bookstore/Bookstore",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/DocumentList/DocumentList",
+          "pathName": "pages/DocumentList/DocumentList",
+          "query": "documentid=5162",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/document-page/document-page",
+          "pathName": "pages/document-page/document-page",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

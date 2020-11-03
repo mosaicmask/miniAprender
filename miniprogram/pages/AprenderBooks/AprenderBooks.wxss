@@ -1,0 +1,1 @@
+.books_body{width:100%}.shopping_body{height:50%;display:flex;flex-direction:column;align-items:center}.van-cell-text{font-size:24rpx;font-weight:400;color:#a7a5a5}.shopping_title{width:95%}.shopping_box{width:95%}.goBookstore_text{color:#0083c0}

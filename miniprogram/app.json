@@ -1,0 +1,82 @@
+{
+  "pages": [
+    "pages/Index/Index",
+    "pages/Bookstore/Bookstore",
+    "pages/AprenderIndex/AprenderIndex",
+    "pages/TutorialPage/TutorialPage",
+    "pages/DocumentList/DocumentList",
+    "pages/TutorialList/TutorialList",
+    "pages/AprenderTutorials/AprenderTutorials",
+    "pages/AprenderBooks/AprenderBooks",
+    "pages/AprenderMy/AprenderMy",
+    "pages/document-page/document-page"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f5cb70",
+    "navigationBarTitleText": "miniAprender",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#f5cb70",
+    "list": [{
+      "pagePath": "pages/AprenderIndex/AprenderIndex",
+      "text": "文档",
+      "iconPath": "/icons/wd.png",
+      "selectedIconPath": "/icons/wd_e.png"
+    }, {
+      "pagePath": "pages/AprenderTutorials/AprenderTutorials",
+      "text": "教程",
+      "iconPath": "/icons/jc.png",
+      "selectedIconPath": "/icons/jc_e.png"
+    }, {
+      "pagePath": "pages/AprenderBooks/AprenderBooks",
+      "text": "书城",
+      "iconPath": "/icons/sc.png",
+      "selectedIconPath": "/icons/sc_e.png"
+    }, {
+      "pagePath": "pages/AprenderMy/AprenderMy",
+      "text": "个人中心",
+      "iconPath": "/icons/my.png",
+      "selectedIconPath": "/icons/my_e.png"
+    }]
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index"
+  },
+  "plugins": {
+    "chooseLocation": {
+      "version": "1.0.4",
+      "provider": "wx76a9a06e5b4e693e"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

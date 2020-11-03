@@ -1,0 +1,86 @@
+<!-- 天气开始 -->
+<view class="weather_body">
+  <block wx:if="{{realtime!=''}}">
+    <view class="weather_title">
+      <van-cell icon="/icons/wz.png" border="{{false}}" custom-class="title" title-class="title2">
+        <view slot="title">
+          <view class="van-cell-text">{{city}}{{district}}</view>
+        </view>
+      </van-cell>
+    </view>
+    <view class="weather_box">
+      <view class="todayWeather">
+        <van-row custom-class="todayWeather_tow" gutter="20">
+          <van-col span="12" custom-class="todayWeather_left">
+            <view class="Weather_icon">
+              <van-image width="100" height="100" src="/icons/{{weather}}.png" use-loading-slot>
+                <van-loading slot="loading" type="spinner" size="20" vertical />
+              </van-image>
+            </view>
+          </van-col>
+          <van-col span="12" custom-class="todayWeather_right">
+            <view class="text_box">
+              <view>今日当前天气</view>
+              <view class="temperature">{{realtime.temperature}}℃</view>
+              <view>{{realtime.info}} 空气质量优</view>
+              <view>PM2.5 {{realtime.aqi}}  {{realtime.direct}}-{{realtime.power}}</view>
+            </view>
+          </van-col>
+        </van-row>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <van-loading size="24px" color="#ffffff">天气状况正在加载中...</van-loading>
+  </block>
+</view>
+<!-- 天气结束 -->
+<!-- 首页导航开始 -->
+<view class="index_body">
+  <view class="text_box">
+    <text class="text" selectable="false" space="false" decode="false">
+      人之力有穷尽时，
+      而知无穷，
+      因此术业有专攻。
+    </text>
+  </view>
+  <view class="nav_body">
+    <van-row custom-class="nav_body_row">
+      <van-col span="12" custom-class="nav_body_row_left" bindtap="goDocumentation">
+        <view class="Tutorials">自查文档</view>
+      </van-col>
+      <van-col span="12" custom-class="nav_body_row_right">
+        <view class="right_top" hover-class="none" hover-stop-propagation="false" bindtap="goTutorials">
+          <van-row>
+            <van-col span="16" custom-class="Tutorials_text">我要教程</van-col>
+            <van-col span="8" custom-class="imgbox">
+              <van-image width="35" height="35" src="/icons/jc_i.png" />
+            </van-col>
+          </van-row>
+        </view>
+        <view class="right_bottom" hover-class="none" hover-stop-propagation="false" bindtap="goBookCity">
+          <van-row>
+            <van-col span="16" custom-class="Tutorials_text">我要书籍</van-col>
+            <van-col span="8" custom-class="imgbox">
+              <van-image width="35" height="35" src="/icons/sj.png" />
+            </van-col>
+          </van-row>
+        </view>
+      </van-col>
+    </van-row>
+  </view>
+  <!-- 广告位招租开始 -->
+  <view class="AdvertisingSpace">
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}" indicator-active-color="#f5cb70" class="banner_box">
+      <block wx:for="{{AdvertisingSpace}}" wx:key="*this">
+        <swiper-item>
+          <van-image custom-class="banner_zs" src="{{item}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 广告位招租结束 -->
+  <!-- 页尾提示 -->
+  <van-loading size="24px">下面什么都没有啦...</van-loading>
+</view>
+<!-- 首页导航结束 -->

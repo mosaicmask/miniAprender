@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "highlight-component": "../../components/highlight/index",
+    "highlight-renderer": "../../components/renderer/index"
+  }
+}

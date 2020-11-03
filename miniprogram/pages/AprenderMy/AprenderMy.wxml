@@ -1,0 +1,36 @@
+<block wx:if="{{login_flag}}">
+  <van-cell is-link center custom-class="my_box">
+    <view slot="title">
+      <view class="van-cell-text">{{userInfo.nickName}}</view>
+      <van-tag type="danger">暂无手机号</van-tag>
+    </view>
+    <view>
+      <van-image round width="150rpx" height="150rpx" src="{{userInfo.avatarUrl}}" />
+    </view>
+  </van-cell>
+  <van-cell title="我的收藏" border="{{false}}" icon="/icons/like.png" is-link />
+  <van-cell title="我的书籍" border="{{false}}" icon="/icons/book.png" is-link />
+  <van-cell title="浏览历史" icon="/icons/lishi.png" is-link />
+  <van-cell title="隐私权政策" border="{{false}}" icon="/icons/yinsi.png" is-link />
+  <van-cell title="关于版权" border="{{false}}" icon="/icons/weiquan.png" is-link />
+  <van-cell title="在线客服" icon="/icons/kefu.png" is-link />
+</block>
+
+<block wx:else>
+  <van-cell center custom-class="my_box">
+    <view>
+        <van-button type="primary" size="large" open-type="getUserInfo" bind:getuserinfo="setuserinfo">
+          立即登录
+        </van-button>
+    </view>
+    <view slot="title">
+      <van-image round width="150rpx" height="150rpx" src="{{userInfo.avatarUrl}}" />
+    </view>
+  </van-cell>
+  <van-cell title="我的收藏" border="{{false}}" icon="location-o" is-link />
+  <van-cell title="我的书籍" border="{{false}}" icon="location-o" is-link />
+  <van-cell title="浏览历史" icon="location-o" is-link />
+  <van-cell title="隐私权政策" border="{{false}}" icon="location-o" is-link />
+  <van-cell title="关于版权" border="{{false}}" icon="location-o" is-link />
+  <van-cell title="在线客服" icon="location-o" is-link />
+</block>
